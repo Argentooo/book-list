@@ -106,13 +106,13 @@ document.getElementById("book-form").addEventListener("submit", (e) => {
   const ui = new UI();
 
   if (title === "" || author === "" || isbn === "") {
-    ui.showAlert("Заполните все поля!", "error");
+    ui.showAlert("Fill in all fields!", "error");
   } else {
     ui.addBookToList(book);
 
     Store.addBook(book);
 
-    ui.showAlert("Книга добавлена!", "success");
+    ui.showAlert("Book added!", "success");
 
     ui.clearFields();
   }
@@ -128,7 +128,7 @@ document.getElementById("book-list").addEventListener("click", (e) => {
   Store.removeBook(e.target);
   console.log(e.target);
 
-  ui.showAlert("Книга удалена!", "success");
+  ui.showAlert("The book has been removed!", "success");
 
   e.preventDefault();
 });
